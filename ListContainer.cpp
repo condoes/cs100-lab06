@@ -19,12 +19,18 @@ void ListContainer::print() {
 }
 
 void ListContainer::sort() {
-    if(sort_function != nullptr) {
+    try{
+        if(sort_function) {
         this->sort_function->sort(this);
     }
-    else {
-        throw "sort function is null";
+        else {
+            throw "sort function is null";
+        }
     }
+    catch(const char* msg) {
+        cout << "Sort function is null- cannot call sort \n";
+    }
+    
 }
 
 void ListContainer::swap(int i, int j) {
@@ -32,6 +38,7 @@ void ListContainer::swap(int i, int j) {
     list <Base*>:: iterator item2 = next(container.begin(), j);
 
     iter_swap(item1, item2);
+
 }
 
 Base* ListContainer::at(int r) {
