@@ -3,19 +3,15 @@
 
 #include "sort.hpp"
 #include "base.hpp"
+#include <list>
 
 class Sort;
 class Base;
 
-struct Node {
-    Base* data;
-    Node *next;
-    Node(Base* data) : data(data), next(0) {}
-};
 
 class ListContainer : public Container {
     private:
-        Node *head;
+        std::list<Base*> container;
     protected:
         Sort* sort_function;
 
