@@ -1,5 +1,6 @@
 #include "vectorContainer.hpp"
 #include "container.hpp"
+#include "base.hpp"
 #include <iostream>
 
 void VectorContainer::add_element(Base* element) {
@@ -9,7 +10,7 @@ void VectorContainer::add_element(Base* element) {
         // iterate through trees and output the expressions (use stringify())
 void VectorContainer::print() {
     for (int i = 0; i < container.size(); ++i) {
-        cout << container.at(i)->stringify();
+        cout << container.at(i)->stringify() << " ";
     }
 }
 
@@ -28,7 +29,6 @@ void VectorContainer::swap(int i, int j) {
     Base* temp = container.at(i);
     container.at(i) = container.at(j);
     container.at(j) = temp;
-    delete temp;
 }
 
         // get top ptr of tree at index i
