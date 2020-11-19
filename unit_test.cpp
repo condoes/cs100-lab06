@@ -7,13 +7,13 @@
 // #include "add_test.hpp"
 // #include "pow_test.hpp"
 // #include "Rand_test.hpp"
-#include "op.hpp"
-#include "Mult.hpp"
-#include "add.hpp"
-#include "sub.hpp"
-#include "../vectorContainer.hpp"
-#include "../sort.hpp"
-#include "../bubbleSort.hpp"
+#include "lab04/op.hpp"
+#include "lab04/Mult.hpp"
+#include "lab04/add.hpp"
+#include "lab04/sub.hpp"
+#include "vectorContainer.hpp"
+#include "sort.hpp"
+#include "bubbleSort.hpp"
 
 using namespace std;
 

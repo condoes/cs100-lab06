@@ -5,7 +5,7 @@ ADD_SUBDIRECTORY(googletest)
 SET(CMAKE_CXX_STANDARD 11)
 
 ADD_EXECUTABLE(test
-    lab04/unit_test.cpp
+    unit_test.cpp
     vectorContainer.cpp
     bubbleSort.cpp
 )
