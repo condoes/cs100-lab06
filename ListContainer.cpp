@@ -6,17 +6,6 @@
 
 using namespace std;
 
-// ListContainer::ListContainer() : sort_function(nullptr){
-
-// }
-
-// ListContainer::ListContainer(Sort* function) : sort_function(function){
-
-// }
-
-void ListContainer::set_sort_function(Sort * sort_function) {
-
-}
 
 void ListContainer::add_element(Base* element) {
     container.push_back(element);
@@ -24,13 +13,18 @@ void ListContainer::add_element(Base* element) {
 
 void ListContainer::print() {
     for(list<Base*>::iterator it = container.begin(); it != container.end(); it++) {
-        cout << (*it)->stringify();
-        cout << endl;
+        cout << (*it)->stringify() <<  " ";
+        //cout << endl;
     }
 }
 
 void ListContainer::sort() {
-
+    if(sort_function != nullptr) {
+        this->sort_function->sort(this);
+    }
+    else {
+        throw "sort function is null";
+    }
 }
 
 void ListContainer::swap(int i, int j) {
