@@ -5,13 +5,13 @@
 
 using namespace std;
 
-ListContainer::ListContainer() {
+// ListContainer::ListContainer() : sort_function(nullptr){
 
-}
+// }
 
-ListContainer::ListContainer(Sort* function) {
+// ListContainer::ListContainer(Sort* function) : sort_function(function){
 
-}
+// }
 
 void ListContainer::set_sort_function(Sort * sort_function) {
 
@@ -40,22 +40,33 @@ void ListContainer::sort() {
 }
 
 void ListContainer::swap(int i, int j) {
+    ListContainer* node1;
+    ListContainer* node2;
 
+    Base* node1Val = node1->at(i);
+    Base* node2Val = node2->at(i);
+
+    Base* tempVal = node1Val;
+
+    node1Val = node2Val;
+    node2Val = tempVal;
 }
 
 Base* ListContainer::at(int r) {
     Node* current = head;
     int count = 0;
+    Base* atReturn = 0;
 
     while(current != nullptr) {
         if(count == r) {
-            return current->data;
+            atReturn = current->data;
         }
         else {
             current = current->next;
             count++;
         }
     }
+    return atReturn;
 }
 
 int ListContainer::size() {
