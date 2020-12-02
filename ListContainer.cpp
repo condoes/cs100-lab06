@@ -12,8 +12,7 @@ void ListContainer::add_element(Base *element) {
 
 void ListContainer::print() {
     for(list<Base*>::iterator it = container.begin(); it != container.end(); it++) {
-        cout << (*it)->stringify();
-        cout << endl;
+        cout << (*it)->stringify() << " ";
     }
 }
 
