@@ -5,9 +5,11 @@ ADD_SUBDIRECTORY(googletest)
 SET(CMAKE_CXX_STANDARD 11)
 
 ADD_EXECUTABLE(test
-    unit_test.cpp
-    vectorContainer.cpp
-    bubbleSort.cpp
+    vector_unit_test.cpp
+    list_tests.cpp
+    ListContainer.cpp
+    SelectionSort.cpp
+    BubbleSort.cpp
 )
 
 ADD_EXECUTABLE(lab
