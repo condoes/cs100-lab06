@@ -7,8 +7,8 @@
 #include "ListContainer.hpp"
 #include "container.hpp"
 #include "base.hpp"
-#include "ListSelectionSort.hpp"
-#include "ListBubbleSort.hpp"
+#include "SelectionSort.hpp"
+#include "BubbleSort.hpp"
 #include "sort.hpp"
 #include <iostream>
 #include <string>
