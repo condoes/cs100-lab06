@@ -63,15 +63,15 @@ TEST(ListSortTest, nullSort) {
     container->add_element(five);
     container->add_element(ten);
 
-    container->sort();
-    testing::internal::CaptureStdout();
-    cout << "sort function is null- cannot call sort";
-    string output = testing::internal::GetCapturedStdout();
-
-    EXPECT_EQ(output, "sort function is null- cannot call sort");
-    EXPECT_EQ(container->at(0)->evaluate(), 1);
-    EXPECT_EQ(container->at(1)->evaluate(), 5);
-    EXPECT_EQ(container->at(2)->evaluate(), 10);
+    // container->sort();
+    // testing::internal::CaptureStdout();
+    // cout << "sort function is null- cannot call sort";
+    // string output = testing::internal::GetCapturedStdout();
+    EXPECT_ANY_THROW(container->sort());
+    // EXPECT_EQ(output, "sort function is null- cannot call sort");
+    // EXPECT_EQ(container->at(0)->evaluate(), 1);
+    // EXPECT_EQ(container->at(1)->evaluate(), 5);
+    // EXPECT_EQ(container->at(2)->evaluate(), 10);
 }
 
 TEST(ListSortTest, listSelectionSort) {

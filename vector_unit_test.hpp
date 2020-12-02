@@ -98,7 +98,10 @@ TEST(VectContTest, swap) {
 
 TEST(VectContTest, nullSort) {
     Container* container = new VectorContainer();
-    container->sort();
+    // container->sort();
+    // testing::internal::CaptureStdout();
+    // string output = testing::internal::GetCapturedStdout();
+    EXPECT_ANY_THROW(container->sort());
 } 
 
 TEST(VectContTest, SortNums) {
