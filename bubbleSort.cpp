@@ -1,6 +1,6 @@
 #include "bubbleSort.hpp"
 
-void BubbleSort::sort(Container* container) {             
+void BubbleSort::Sort(Container* container) {             
     int size = container->size(); 
     for(int i = 0; i < size-1; i++) {
         for (int j = 0; j < size -i-1; j++) {
