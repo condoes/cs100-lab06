@@ -7,8 +7,8 @@
 
 class BubbleSort : public Sort {
     public:
-        BubbleSort();
-        void Sort(Container* container);
+        BubbleSort() {};
+        void sort(Container* container);
 };
 
 #endif
