@@ -9,7 +9,7 @@ ADD_EXECUTABLE(test
     list_tests.cpp
     ListContainer.cpp
     SelectionSort.cpp
-    BubbleSort.cpp
+    bubbleSort.cpp
 )
 
 ADD_EXECUTABLE(lab
